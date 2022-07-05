@@ -2,6 +2,15 @@
 
 pkgs.mkShell {
   nativeBuildInputs = with pkgs; [
-    nodejs nodePackages.typescript nodePackages.typescript-language-server
+    nodejs
+
+    # HTML
+    nodePackages.vscode-langservers-extracted
+
+    # TypeScript
+     nodePackages.typescript nodePackages.typescript-language-server
+
+    # Python
+    python39Packages.requests
   ];
 }
