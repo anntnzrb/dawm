@@ -12,5 +12,8 @@ pkgs.mkShell {
 
     # Python
     python39Packages.requests
+
+    # Angular
+    nodePackages."@angular/cli"
   ];
 }
