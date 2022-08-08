@@ -14,7 +14,7 @@ pkgs.mkShell {
     # misc 
     python39Packages.requests heroku
 
-    # Angular
-    nodePackages."@angular/cli"
+    # DB
+    sqlite
   ];
 }
