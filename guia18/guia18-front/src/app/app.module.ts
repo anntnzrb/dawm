@@ -8,19 +8,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListaComponent } from './lista/lista.component';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
+import { ProductoComponent } from './producto/producto.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaComponent
+    ListaComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy }
