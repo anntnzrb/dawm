@@ -15,4 +15,17 @@ router.get('/productos', function (req, res, next) {
     .catch(error => res.status(400).send(error))
 });
 
+router.get('/productos/:id', function (req, res, next) {
+  const id = req.params.id;
+  Producto.findOne({
+    where: {
+      id: id
+    }
+  })
+    .then(productos => {
+      res.json(productos);
+    })
+    .catch(error => res.status(400).send(error))
+});
+
 module.exports = router;
