@@ -10,4 +10,8 @@ export class ProductoService {
   obtenerProductos() {
     return this.http.get('http://localhost:3000/api/productos')
   }
+
+  obtenerProductoPorId(id: number) {
+    return this.http.get('http://localhost:3000/api/productos/' + id.toString())
+  }
 }
