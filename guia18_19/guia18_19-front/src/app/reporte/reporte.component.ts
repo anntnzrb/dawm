@@ -25,7 +25,7 @@ export class ReporteComponent implements OnInit {
 
   getProductoByName(producto: string) {
     this.productoService
-      .obtenerProductosPorNombre(producto)
+      .getProductosByName(producto)
       .subscribe((data) => {
         this.productos = [];
         for (const p in data) {
