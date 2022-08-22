@@ -14,4 +14,23 @@ export class ProductoService {
   obtenerProductoPorId(id: number) {
     return this.http.get('http://localhost:3000/api/productos/' + id.toString())
   }
+
+  obtenerProductosPorNombre(nombre: string) {
+    const str =
+      `https://productos-b2f04-default-rtdb.firebaseio.com/collection.json?orderBy=%22productoNombre%22&equalTo=%22${encodeURIComponent(nombre)}%22`;
+    return this.http.get(str);
+  }
+
+  getAllProducts() {
+    return this.http.get(
+      'https://productos-da502-default-rtdb.firebaseio.com/collection.json'
+    );
+  }
+
+  getProductosByName(nombre: string) {
+    const str = `https://productos-da502-default-rtdb.firebaseio.com/collection.json?orderBy=%22productoNombre%22&equalTo=%22${encodeURIComponent(
+      nombre
+    )}%22`;
+    return this.http.get(str);
+  }
 }

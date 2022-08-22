@@ -13,12 +13,14 @@ import { MatTableModule } from '@angular/material/table';
 
 import { ListaComponent } from './lista/lista.component';
 import { ProductoComponent } from './producto/producto.component';
+import { ReporteComponent } from './reporte/reporte.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaComponent,
-    ProductoComponent
+    ProductoComponent,
+    ReporteComponent
   ],
   imports: [
     BrowserModule,
