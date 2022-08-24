@@ -1,0 +1,39 @@
+{
+  "model": {
+    "type": "Object",
+    "value": {
+      "movie_id": {
+        "type": "randomNumberBetween",
+        "value": [
+          1,
+          12
+        ]
+      },
+      "country": {
+        "type": "randomElementInArray",
+        "value": [
+          "Belgium",
+          "Brazil",
+          "Canada",
+          "Ecuador",
+          "France",
+          "Germany",
+          "Mexico",
+          "Netherlands",
+          "Panama",
+          "Russia",
+          "United States",
+          "Uruguay",
+          0
+        ]
+      },
+      "sales": {
+        "type": "randomNumberBetween",
+        "value": [
+          1000,
+          100000
+        ]
+      }
+    }
+  }
+}
